@@ -1,0 +1,15 @@
+# Discord Bot（音声機能込み）
+discord.py[voice]==2.6.3
+
+# Webサーバー
+fastapi==0.116.2
+uvicorn[standard]==0.36.0
+
+# HTTP通信や非同期処理
+aiohttp==3.12.15
+
+# ffmpeg Pythonラッパー
+ffmpeg-python==0.2.0
+
+# .env読み込み用（オプション）
+python-dotenv==1.1.1
