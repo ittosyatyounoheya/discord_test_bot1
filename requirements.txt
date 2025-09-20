@@ -1,15 +1,15 @@
-# Discord Boti‰¹º‹@”\‚İj
+# Discord Botï¼ˆéŸ³å£°æ©Ÿèƒ½è¾¼ã¿ï¼‰
 discord.py[voice]==2.6.3
 
-# WebƒT[ƒo[
+# Webã‚µãƒ¼ãƒãƒ¼
 fastapi==0.116.2
 uvicorn[standard]==0.36.0
 
-# HTTP’ÊM‚â”ñ“¯Šúˆ—
+# HTTPé€šä¿¡ã‚„éåŒæœŸå‡¦ç†
 aiohttp==3.12.15
 
-# ffmpeg Pythonƒ‰ƒbƒp[
+# ffmpeg Pythonãƒ©ãƒƒãƒ‘ãƒ¼
 ffmpeg-python==0.2.0
 
-# .env“Ç‚İ‚İ—piƒIƒvƒVƒ‡ƒ“j
+# .envèª­ã¿è¾¼ã¿ç”¨ï¼ˆã‚ªãƒ—ã‚·ãƒ§ãƒ³ï¼‰
 python-dotenv==1.1.1
