@@ -12,6 +12,15 @@ RUN apt-get update && \
         libffi-dev \
         && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    libxml2-dev \
+    libxslt1-dev
+
+
 # Python依存関係をコピーしてインストール
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
