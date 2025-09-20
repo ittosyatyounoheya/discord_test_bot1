@@ -1,10 +1,10 @@
-# ƒx[ƒXƒCƒ[ƒW
+# ãƒ™ãƒ¼ã‚¹ã‚¤ãƒ¡ãƒ¼ã‚¸
 FROM python:3.11-slim
 
-# ì‹ÆƒfƒBƒŒƒNƒgƒŠ
+# ä½œæ¥­ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 WORKDIR /app
 
-# ƒVƒXƒeƒ€ˆË‘¶ƒpƒbƒP[ƒW‚ÌƒCƒ“ƒXƒg[ƒ‹i‰¹ºÄ¶—pj
+# ã‚·ã‚¹ãƒ†ãƒ ä¾å­˜ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ï¼ˆéŸ³å£°å†ç”Ÿç”¨ï¼‰
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ffmpeg \
@@ -18,18 +18,20 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     python3-dev \
     libxml2-dev \
-    libxslt1-dev
+    libxslt1-dev \
+    zlib1g-dev
 
 
-# PythonˆË‘¶ŠÖŒW‚ğƒRƒs[‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹
+
+# Pythonä¾å­˜é–¢ä¿‚ã‚’ã‚³ãƒ”ãƒ¼ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒR[ƒh‚ğƒRƒs[
+# ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚³ãƒ¼ãƒ‰ã‚’ã‚³ãƒ”ãƒ¼
 COPY . .
 
-# WebƒT[ƒo[—pƒ|[ƒg
+# Webã‚µãƒ¼ãƒãƒ¼ç”¨ãƒãƒ¼ãƒˆ
 EXPOSE 10000
 
-# Bot + Web‚ğ“¯‹N“®‚·‚éƒƒCƒ“ƒXƒNƒŠƒvƒg
+# Bot + Webã‚’åŒæ™‚èµ·å‹•ã™ã‚‹ãƒ¡ã‚¤ãƒ³ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
 CMD ["python", "startup.py"]
